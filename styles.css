@@ -1,0 +1,94 @@
+/* Variables de color y espaciado, para no repetir valores en todo el archivo */
+:root {
+    --color-primary: #2563eb;
+    --color-bg: #f5f5f5;
+    --spacing-md: 1rem;
+}
+
+/* box-sizing: border-box hace que el padding y el borde
+   se cuenten DENTRO del ancho del elemento, no se sumen aparte.
+   Sin esto, los elementos se pueden desbordar del contenedor. */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--color-bg);
+}
+
+/* Estructura general con Grid: una columna en mobile */
+body {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+header { grid-area: header; }
+main   { grid-area: main; }
+footer { grid-area: footer; }
+
+header,
+footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing-md);
+}
+
+main {
+    padding: var(--spacing-md);
+}
+
+/* Navegación en fila, usando flex */
+.nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    list-style: none;
+    padding: 0;
+}
+
+.nav__link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Cards con Flexbox */
+.cards__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.card {
+    flex: 1 1 250px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: var(--spacing-md);
+}
+
+.card--featured {
+    border: 2px solid var(--color-primary);
+}
+
+.card__title {
+    color: var(--color-primary);
+}
+
+/* A partir de 768px de ancho (desktop), ponemos main en dos columnas:
+   el contenido principal y el aside a un lado */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .sidebar {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+    }
+}

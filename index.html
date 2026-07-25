@@ -1,88 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto Integrador - Página Principal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Integrador - Página Principal</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <header>
+<header class="site-header">
     <h1 id="nombre-proyecto">Mi Proyecto Integrador</h1>
-    <nav aria-label="Navegación principal">
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
+    <nav class="nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#inicio">Inicio</a></li>
+            <li class="nav__item"><a class="nav__link" href="#servicios">Servicios</a></li>
+            <li class="nav__item"><a class="nav__link" href="#productos">Productos</a></li>
+            <li class="nav__item"><a class="nav__link" href="#contacto">Contacto</a></li>
+        </ul>
     </nav>
-  </header>
-
-  <main>
-
-    <section id="inicio" aria-labelledby="hero-titulo">
-      <h2 id="hero-titulo">Bienvenido a mi proyecto</h2>
-      <p>
-        Este es un proyecto integrador desarrollado como parte del curso de desarrollo web.
-        Aquí encontrarás información sobre nuestros servicios, productos y formas de contacto,
-        construido con una estructura HTML5 semántica, accesible y organizada.
-      </p>
+</header>
+<main class="site-main">
+    <section id="inicio" class="hero" aria-labelledby="hero-titulo">
+        <h2 id="hero-titulo">Bienvenido a mi proyecto</h2>
+        <p>
+            Este es un proyecto integrador desarrollado como parte del curso de desarrollo web.
+            Aquí encontrarás información sobre nuestros servicios, productos y formas de contacto,
+            construido con una estructura HTML5 semántica, accesible y organizada.
+        </p>
     </section>
-
-    <section id="servicios" aria-labelledby="servicios-titulo">
-      <h2 id="servicios-titulo">Nuestros Servicios</h2>
-
-      <article>
-        <h3>Desarrollo Web</h3>
-        <p>Creamos sitios web modernos, responsivos y accesibles para cualquier tipo de negocio.</p>
-      </article>
-
-      <article>
-        <h3>Diseño UX/UI</h3>
-        <p>Diseñamos experiencias de usuario intuitivas y atractivas centradas en el cliente.</p>
-      </article>
-
-      <article>
-        <h3>Consultoría Técnica</h3>
-        <p>Brindamos asesoría en tecnologías web para optimizar tus proyectos digitales.</p>
-      </article>
+    <section id="servicios" class="cards" aria-labelledby="servicios-titulo">
+        <h2 id="servicios-titulo">Nuestros Servicios</h2>
+        <div class="cards__list">
+            <article class="card card--featured">
+                <h3 class="card__title">Desarrollo Web</h3>
+                <p class="card__text">Creamos sitios web modernos, responsivos y accesibles para cualquier tipo de negocio.</p>
+            </article>
+            <article class="card">
+                <h3 class="card__title">Diseño UX/UI</h3>
+                <p class="card__text">Diseñamos experiencias de usuario intuitivas y atractivas centradas en el cliente.</p>
+            </article>
+            <article class="card">
+                <h3 class="card__title">Consultoría Técnica</h3>
+                <p class="card__text">Brindamos asesoría en tecnologías web para optimizar tus proyectos digitales.</p>
+            </article>
+        </div>
     </section>
-
-    <section id="productos" aria-labelledby="productos-titulo">
-      <h2 id="productos-titulo">Productos Destacados</h2>
-
-      <article>
-        <h3>Plantilla Web Básica</h3>
-        <p>Una plantilla lista para personalizar, ideal para pequeños proyectos.</p>
-      </article>
-
-      <article>
-        <h3>Kit de Componentes UI</h3>
-        <p>Conjunto de componentes reutilizables para acelerar el desarrollo frontend.</p>
-      </article>
-
-      <article>
-        <h3>Paquete de Accesibilidad</h3>
-        <p>Herramientas y guías para mejorar la accesibilidad de tu sitio web.</p>
-      </article>
+    <section id="productos" class="cards" aria-labelledby="productos-titulo">
+        <h2 id="productos-titulo">Productos Destacados</h2>
+        <div class="cards__list">
+            <article class="card">
+                <h3 class="card__title">Plantilla Web Básica</h3>
+                <p class="card__text">Una plantilla lista para personalizar, ideal para pequeños proyectos.</p>
+            </article>
+            <article class="card">
+                <h3 class="card__title">Kit de Componentes UI</h3>
+                <p class="card__text">Conjunto de componentes reutilizables para acelerar el desarrollo frontend.</p>
+            </article>
+            <article class="card">
+                <h3 class="card__title">Paquete de Accesibilidad</h3>
+                <p class="card__text">Herramientas y guías para mejorar la accesibilidad de tu sitio web.</p>
+            </article>
+        </div>
     </section>
-
-    <aside aria-labelledby="aside-titulo">
-      <h2 id="aside-titulo">Novedades</h2>
-      <p>Próximamente agregaremos estilos y funcionalidades interactivas a este proyecto.</p>
+    <aside class="sidebar" aria-labelledby="aside-titulo">
+        <h2 id="aside-titulo">Novedades</h2>
+        <p>Próximamente agregaremos estilos y funcionalidades interactivas a este proyecto.</p>
     </aside>
-
-  </main>
-
-  <footer id="contacto">
+</main>
+<footer class="site-footer" id="contacto">
     <h2>Contacto</h2>
     <address>
-      Correo: juanito@miumg.edu.gt<br>
-      Teléfono: +502 1234-5678
+        Correo: luis@miumg.edu.gt<br>
+        Teléfono: +502 1234-5678
     </address>
-    <p> 2026 Mi Proyecto Integrador, Luis Alfonso Morán Juárez.</p>
-  </footer>
-
+    <p>2026 Mi Proyecto Integrador, Luis Alfonso Morán Juárez.</p>
+</footer>
 </body>
 </html>
